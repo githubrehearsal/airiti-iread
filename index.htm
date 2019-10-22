@@ -1,0 +1,569 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iread灰熊愛讀書 | 歡迎光臨「優質國度」！已經為您規劃好所有的需求，請確認。</title>
+	<meta property="og:title" content="iread灰熊愛讀書 | 歡迎光臨「優質國度」！已經為您規劃好所有的需求，請確認。">
+	</meta>
+	<meta property="og:image"
+		content="http://www.iread.com.tw/marketing_page/ xxxxxxxxxxxxxxxxxxxxxxxx /images/fb_share.jpg" />
+	<link rel="Bookmark" type="image/x-icon" href="https://www.iread.com.tw/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.iread.com.tw/favicon.ico">
+	<style type="text/css">
+		body {
+			text-decoration: none;
+		}
+
+		map *:focus {
+			outline: none;
+		}
+
+		img {
+			border: 0px;
+		}
+
+		a img {
+			border: none;
+		}
+
+		/*clear float*/
+		.clearfix:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+
+		.clearfix {
+			display: inline-table;
+		}
+
+		/* Hides from IE-mac \*/
+		* html .clearfix {
+			height: 1%;
+		}
+
+		.clearfix {
+			display: block;
+		}
+
+		/* End hide from IE-mac */
+		img {
+			border: 0;
+		}
+
+		ol,
+		ul,
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+
+		body,
+		pre,
+		.overlay {
+			font-size: 20px;
+			font-family: "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
+		}
+
+		body {
+			background: url(images/375328_bg.jpg) top center fixed;
+			margin: 0;
+		}
+
+		pre {
+			/*white-space: pre-line;保留換行,合併空格,遇到父元素邊界自動換行*/
+			word-wrap: break-word;
+			/* IE 5.5-7 */
+			white-space: -moz-pre-wrap;
+			/* Firefox 1.0-2.0 */
+			white-space: pre-wrap;
+			/* Modern browsers */
+		}
+
+		h1 {
+			font-size: 30px;
+			margin: 0;
+			padding: 0;
+		}
+
+		small {
+			display: block;
+			color: #999;
+			text-align: right;
+		}
+
+		/*刊頭*/
+		.top-box {
+			background: url(images/506102_top.jpg) no-repeat top center;
+			width: 100%;
+		}
+
+		.top-box img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		.top-box-m {
+			display: none;
+			margin: 0 auto;
+		}
+
+		.top-box-m img,
+		.book-box img {
+			width: 100%;
+			height: auto;
+		}
+
+		/*內容區*/
+		.main-box {
+			width: 920px;
+			margin: 0 auto;
+			padding: 30px;
+			line-height: 1.5;
+			word-wrap: break-word;
+			word-break: normal;
+			text-align: justify;
+			text-justify: inter-ideograph;
+		}
+
+		/*書封*/
+		.book-box {
+			width: 40%;
+			float: right;
+		}
+
+		/*單元1*/
+		.txt-box {
+			width: 55%;
+			float: left;
+			padding-right: 5%;
+		}
+
+		/*書本價格*/
+		.price {
+			width: 100%;
+			color: #666;
+			font-family: Georgia, "Times New Roman", Times, serif, "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.price strong {
+			color: #ed2525;
+		}
+
+		.price a,
+		.price a:visited {
+			display: block;
+			width: 100%;
+			color: #000;
+			text-decoration: none;
+			padding: 10px 0;
+			background-color: #f7cb6f;
+			border-radius: 5px;
+			margin-top: 20px;
+			transition: .3s;
+		}
+
+		.price a:hover {
+			color: #fff;
+			background-color: #c81a20;
+		}
+
+		/*文章試讀*/
+		.word {
+			width: 98%;
+			/*-20*/
+			height: 520px;
+			overflow: auto;
+			color: #333;
+			margin: 20px auto 0;
+			padding-right: 2%;
+			word-wrap: break-word;
+			word-break: normal;
+			text-align: justify;
+			text-justify: inter-ideograph;
+		}
+
+		/*圖片文字*/
+		.topic {
+			display: block;
+			margin: 30px auto;
+		}
+
+		/*圖片試讀*/
+		.pic-box img {
+			float: left;
+			width: 19%;
+			height: auto;
+			margin: 20px 0.5%;
+		}
+
+		/*延伸閱讀--書封-書名-作者-價格*/
+		.more-column {
+			float: left;
+			width: 15%;
+			/*7本=12.6%*/
+			padding: 0 0.8%;
+			text-align: center;
+		}
+
+		.more-row {
+			margin: 30px auto;
+		}
+
+		.more-row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.more-cover {
+			display: block;
+			border: 1px solid #d2d2d2;
+			background-color: #fff;
+			padding: 3px;
+			margin: 0 auto;
+		}
+
+		/*正常尺寸*/
+		.more-cover,
+		.more-cover .normal {
+			width: 130px;
+			height: 180px;
+		}
+
+		/*特殊尺寸*/
+		.more-cover .sp {
+			width: 130px;
+			height: auto;
+			margin-top: 35%;
+		}
+
+		.more-booktitle {
+			color: #C60;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 1.5;
+			padding: 0 5px;
+		}
+
+		.more-author {
+			color: #333;
+			font-size: 16px;
+			line-height: 1.5;
+			padding: 0 5px;
+		}
+
+		.more-price {
+			color: #666;
+			font-size: 14px;
+			/*7本=13.5px*/
+			line-height: 1.5;
+			font-family: Georgia, "Times New Roman", Times, serif, "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
+		}
+
+		.more-price strong {
+			color: #ed2525;
+		}
+
+		.more-price a,
+		.more-price a:visited {
+			display: block;
+			width: 100%;
+			color: #000;
+			font-size: 14px;
+			text-decoration: none;
+			padding: 6px 0;
+			background-color: #E0E0E0;
+			border-radius: 5px;
+			margin: 15px auto 0;
+			transition: .3s;
+		}
+
+		.more-price a:hover {
+			color: #fff;
+			background-color: #666;
+		}
+
+		/*手機選單*/
+		.overlay {
+			height: 0%;
+			width: 100%;
+			position: fixed;
+			z-index: 9999;
+			top: 0;
+			left: 0;
+			color: #fff;
+			font-size: 22px;
+			background-color: rgb(0, 0, 0);
+			background-color: rgba(0, 0, 0, 0.9);
+			overflow-y: hidden;
+			transition: 0.5s;
+		}
+
+		.overlay-content {
+			position: relative;
+			width: 50%;
+			line-height: 1.6;
+			margin: 50px auto 0;
+		}
+
+		.overlay-content span {
+			display: inline-block;
+			color: #e8a852;
+			border-bottom: 1px solid #e8a852;
+			margin: 50px 0 20px 0;
+		}
+
+		.overlay a {
+			display: block;
+			color: #fff;
+			text-decoration: none;
+			border-left: 3px solid;
+			transition: 0.3s;
+			margin-top: 30px;
+			padding-left: 10px;
+		}
+
+		.overlay a:hover,
+		.overlay a:focus {
+			color: #818181;
+		}
+
+		.overlay .closebtn {
+			position: absolute;
+			top: 0;
+			right: 8px;
+			font-size: 45px;
+			border-left: 0;
+			margin-top: 0;
+			padding-left: 0;
+		}
+
+		.openbtn {
+			display: none;
+			position: fixed;
+			top: 0;
+			right: 10px;
+			z-index: 9;
+			font-size: 30px;
+			cursor: pointer;
+		}
+
+		.d1 {
+			text-align: center;
+			margin: 0 auto;
+			padding-bottom: 20px;
+		}
+
+		@media (max-width: 812px) {
+
+			body,
+			pre {
+				font-size: 18px;
+			}
+
+			h1 {
+				font-size: 25px;
+			}
+
+			.top-box {
+				display: none;
+			}
+
+			.top-box-m,
+			.openbtn {
+				display: block;
+			}
+
+			.main-box {
+				width: 90%;
+				line-height: 1.5;
+				padding: 15px 0;
+			}
+
+			.book-box,
+			.book-box img,
+			.price,
+			#muteYouTubeVideoPlayer,
+			iframe,
+			.topic {
+				width: 100%;
+			}
+
+			.book-box,
+			.txt-box {
+				float: none;
+			}
+
+			.txt-box {
+				width: 100%;
+				padding: 0;
+				margin-top: 50px;
+			}
+
+			.word {
+				height: 570px;
+			}
+
+			.pic-box img {
+				width: 48%;
+				margin: 20px 1%;
+			}
+
+			.more-column {
+				width: 48%;
+				margin: 20px 0;
+			}
+
+			.col-m {
+				width: 100%;
+				display: inline-table;
+			}
+
+			.more-cover,
+			.more-cover .normal {
+				width: 150px;
+				height: 208px;
+			}
+
+			.more-cover .sp {
+				width: 150px;
+				height: auto;
+			}
+
+			body {
+				background-size: cover;
+			}
+
+			.d1 img {
+				width: 90%;
+			}
+		}
+
+		@media (max-width: 320px) {
+
+			.more-cover,
+			.more-cover .normal {
+				width: 125px;
+				height: auto;
+			}
+		}
+	</style>
+	<link href="css/MP.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		function MM_swapImgRestore() { //v3.0
+			var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+		}
+		function MM_preloadImages() { //v3.0
+			var d = document; if (d.images) {
+				if (!d.MM_p) d.MM_p = new Array();
+				var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+					if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+			}
+		}
+		function MM_findObj(n, d) { //v4.01
+			var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+				d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+			}
+			if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+			for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+			if (!x && d.getElementById) x = d.getElementById(n); return x;
+		}
+		function MM_swapImage() { //v3.0
+			var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+				if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+		}
+	</script>
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script src="https://www.iread.com.tw/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<!--TOP-->
+	<div id="TOP_HEADER_wrapper">
+		<div id="TOP_HEADER_bg">
+			<!--頁首Logo&主menu-->
+			<div id="TOP_HEADER" style="position:relative;">
+				<div id="logo">
+					<a href="https://www.iread.com.tw/index.aspx" target="_blank">
+						<img src="http://www.iread.com.tw/marketing_page/ireadHeader/mp_logo_s.png" />
+					</a>
+				</div>
+
+				<div class="fb-like" id="Facebook"
+					data-href="http://www.iread.com.tw/marketing_page/ xxxxxxxxxxxxxxxxxxxxxxxx /index.html"
+					data-send="true" data-layout="button_count" data-width="150" data-show-faces="true">
+				</div>
+
+				<div id="link_info">
+					<a href="https://www.iread.com.tw/CustomerService.aspx" style="text-decoration: none;"
+						target="_blank">常見問題Q&A</a>&ensp;|&ensp;<a href="mailto:iread@airiti.com"
+						style="text-decoration: none;">客服信箱</a>&ensp;&ensp;
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<!--TOP END -->
+	<div class="top-box"><img src="images/375328_top01.png" usemap="#Map" border="0" />
+		<map name="Map" id="Map">
+			<area shape="rect" coords="936,11,965,41" href="https://www.facebook.com/crownbook/" target="_blank" />
+			<area shape="rect" coords="935,54,965,84" href="https://www.instagram.com/crownbook1954/" target="_blank" />
+		</map>
+		<div class="belt"></div><img src="images/375328_top02.png" />
+	</div>
+	<div class="top-box-m"><img src="images/375328_top_m_01.png" /><img src="images/375328_top_m_02.png" /><img
+			src="images/375328_top_m_03.png" /></div>
+	<div class="d1"><a href="375328_01.htm"><img src="images/375328_d1.png" /></a></div>
+	<!--FOOTER-->
+	<div id="FOOTER_wrapper">
+		<div id="FOOTER1">
+			<!--頁尾版權&連結-->
+			<div class="info2">
+				客服信箱：<a href="mailto:iread@airiti.com">iread@airiti.com</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服務時間：週一～五 9:00~18:00
+				&nbsp;&nbsp;&nbsp;&nbsp;華藝數位股份有限公司
+				&nbsp;&nbsp;&nbsp;&nbsp;地址：234新北市永和區成功路一段80號18樓&nbsp;&nbsp;
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="FOOTER2">
+			<div class="Cor_Rights">
+				Copyright © Airiti Inc. All Rights Reserved.
+			</div>
+		</div>
+	</div>
+	<!--FOOTER END-->
+
+
+
+</body>
+
+
+<div id="fb-root"></div>
+
+<script>(function (d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+
+</html>

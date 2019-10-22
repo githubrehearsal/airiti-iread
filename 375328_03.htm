@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>iread灰熊愛讀書 | 歡迎光臨「優質國度」！已經為您規劃好所有的需求，請確認。</title>
+
+<style type="text/css">
+/*clear float*/ 
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;} 
+.clearfix {display: inline-table;} 
+/* Hides from IE-mac \*/ 
+* html .clearfix {height: 1%;} 
+.clearfix {display: block;} 
+/* End hide from IE-mac */
+
+img {
+	border:0;
+}
+ol, ul, li {
+	list-style:none;
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+
+body, pre, .overlay {
+	font-size:20px;
+	font-family:"微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
+}
+
+body {
+	background:url(images/375328_bg.jpg) top center fixed;
+	margin:0;
+}
+
+pre {
+    /*white-space: pre-line;保留換行,合併空格,遇到父元素邊界自動換行*/
+    word-wrap: break-word;      /* IE 5.5-7 */
+    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+    white-space: pre-wrap;      /* Modern browsers */
+}
+
+h1 {
+	font-size:30px;
+	margin: 0;
+	padding: 0;
+}
+
+small {
+	display:block;
+	color:#999;
+	text-align:right;
+}
+
+/*刊頭*/
+.top-box {
+	background:url(images/506102_top.jpg) no-repeat top center;
+	width:100%;
+}
+.top-box img {
+	display:block;
+	margin:0 auto;
+}
+.top-box-m {
+	display:none;	
+	margin:0 auto;
+}
+.top-box-m img, .book-box img {
+	width:100%;
+	height:auto;
+}
+
+/*內容區*/
+.main-box {
+	width:920px;
+	margin:30px auto;
+	padding:30px;
+	line-height:1.5;
+	word-wrap:break-word;
+    word-break:normal;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    background: url(images/375328_boxbg.png);
+    border-radius: 10px;    
+}
+
+/*書封*/
+.book-box {
+	width:40%;
+	float:right;
+}
+
+/*單元1*/
+.txt-box {
+	width:55%;
+	float:left;
+	padding-right:5%;
+}
+
+/*書本價格*/
+.price {
+	width:100%;
+	color:#666;
+	font-family:Georgia, "Times New Roman", Times, serif, "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
+	text-align:center;
+	margin-bottom:30px;
+}
+.price strong {
+	color:#ed2525;
+}
+.price a, .price a:visited {
+	display:block;
+	width:100%;
+	color:#000;
+	text-decoration:none;
+	padding:10px 0;
+	background-color:#f7cb6f;
+	border-radius:5px;
+	margin-top:20px;
+	transition:.3s;
+}
+.price a:hover {
+	color:#fff;
+	background-color:#c81a20;
+}
+
+/*文章試讀*/
+.word {
+	width:98%;/*-20*/
+	height:520px;
+	overflow:auto;
+	color:#333;
+	margin:20px auto 0;
+	padding-right:2%;
+    word-wrap:break-word;
+    word-break:normal;
+    text-align:justify;
+    text-justify:inter-ideograph;
+}
+
+/*圖片文字*/
+.topic {
+	display:block;
+	margin:30px auto;
+}
+
+/*圖片試讀*/
+.pic-box img {
+	float:left;
+	width:19%;
+	height:auto;
+	margin:20px 0.5%;
+}
+
+/*延伸閱讀--書封-書名-作者-價格*/
+.more-column {
+    float:left;
+    width:15%; /*7本=12.6%*/
+	padding:0 0.8%;
+	text-align:center;
+}
+.more-row {
+	margin:30px auto;
+}
+.more-row:after {
+    content:"";
+    display:table;
+    clear:both;	
+}
+.more-cover {
+	display:block;
+	border:1px solid #d2d2d2;
+	background-color:#fff;
+	padding:3px;
+	margin:0 auto;
+}
+/*正常尺寸*/
+.more-cover, .more-cover .normal {
+	width:130px;
+	height:180px;
+}
+/*特殊尺寸*/
+.more-cover .sp {
+	width:130px;
+	height:auto;
+	margin-top:35%;
+}
+.more-booktitle {
+	color:#C60;
+	font-size:16px;
+	font-weight:bold;
+	line-height:1.5;
+	padding:0 5px;
+}
+.more-author {
+	color:#333;
+	font-size:16px;
+	line-height:1.5;
+	padding:0 5px;
+}
+.more-price {
+	color:#666;	
+	font-size:14px; /*7本=13.5px*/
+	line-height:1.5;
+	font-family:Georgia, "Times New Roman", Times, serif, "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
+}
+.more-price strong {
+	color:#ed2525;
+}
+.more-price a, .more-price a:visited {
+	display:block;
+	width:100%;
+	color:#000;
+	font-size:14px;
+	text-decoration:none;
+	padding:6px 0;
+	background-color:#E0E0E0;
+	border-radius:5px;
+	margin:15px auto 0;
+	transition:.3s;
+}
+.more-price a:hover {
+	color:#fff;
+	background-color:#666;
+}
+
+/*手機選單*/
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+	color: #fff;
+	font-size: 22px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    width: 50%;
+	line-height:1.6;
+	margin: 50px auto 0;
+}
+.overlay-content span {
+	display: inline-block;
+	color: #e8a852;
+	border-bottom: 1px solid #e8a852;
+	margin: 50px 0 20px 0;
+}
+.overlay a {
+	display: block;
+	color: #fff;
+    text-decoration: none;
+    border-left: 3px solid; 
+    transition: 0.3s;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #818181;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    font-size: 45px;
+    border-left: 0;
+    margin-top: 0;
+    padding-left: 0;
+}
+.openbtn {
+	display:none;
+	position: fixed;
+    top: 0;
+    right: 10px;
+	z-index: 9;
+	font-size: 30px;
+	cursor:pointer;
+}
+.belt {
+	width: 100%;
+	height: 237px;
+	background: url(images/375328_belt.png) center;
+}
+.d1 {
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.author {
+	float: right;
+	width: 35%;
+	margin: 30px 0 0 20px;
+}
+.author p {
+	font-size: 13px;
+}
+.author img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+@media (max-width: 812px) {
+	body, pre {
+		font-size:18px;
+	}
+	h1 {
+		font-size:25px;
+	}
+	.top-box {
+		display:none;
+	}
+	.top-box-m, .openbtn {
+		display:block;
+	}
+	.main-box {
+		width:90%;
+		line-height:1.5;
+		padding:15px;
+	}
+	.book-box, .book-box img, .price ,#muteYouTubeVideoPlayer, iframe, .topic {
+		width:100%;
+	}
+	.book-box, .txt-box {
+		float:none;
+	}
+	.txt-box {
+		width:100%;
+		padding:0;
+		margin-top:50px;
+	}
+	.word {
+		height:570px;
+	}
+	.pic-box img {
+		width:48%;
+		margin:20px 1%;
+		}
+	.more-column {
+		width:48%;
+		margin:20px 0;
+	}
+	.col-m {
+		width:100%;
+		display:inline-table;
+	}
+	.more-cover, .more-cover .normal {
+		width:150px;
+		height:208px;
+	}
+	.more-cover .sp {
+		width:150px;
+		height:auto;
+	}
+	body {
+		background-size: cover;
+	}
+	.d1 img {
+		width: 90%;
+	}
+	.author {
+	float: none;
+	width: 90%;
+	margin: 15px auto 0;
+}
+}
+@media (max-width: 320px) {
+	.more-cover, .more-cover .normal {
+		width:125px;
+		height:auto;
+	}
+}
+</style>
+
+<script type='text/javascript'>
+<!--
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-21769407-2']); 
+_gaq.push(['_setDomainName', 'taaze.tw']); 
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+//-->
+</script>
+</head>
+
+<body>
+
+<div class="main-box">
+  <img src="images/375328_t3.png" />
+  <!--文章開始-->
+  <div class="word">
+    <pre><h1 align="center" style="color:#C00">阿道夫和伊娃</h1>
+彼得．失業者曾經有過一個名叫米爾德莉．辦事員的女朋友。他是在真實生活中認識她的，也就是在類比世界裡。那當然是非常罕見而且有點難以啟齒，所以他們在公眾場合不太願意談起這件事。他們經常爭吵，但是從正面的角度來看，和米爾德莉在一起的生活也因此而從不無聊。在五百一十二天前，他們倆純粹為了好玩而登入了「優質伴侶」這個網站，讓網站比較他們兩人的性格。系統說他們兩個並不適合彼此，甚至分別替他們介紹了一個更好的伴侶。彼得和米爾德莉考慮了很久，終於看清他們的確不適合彼此。純粹為了好玩而登入「優質伴侶」其實一點也不好玩。他們倆都偷偷和一個更好的伴侶約好見面。欸，當然不是和一個更好的伴侶，而是和最佳伴侶。
+彼得的最佳伴侶是珊德拉．行政人員。他們從不爭吵。珊德拉的姿色中等，一如彼得這個等級的男人所能期望的。在整整五百天前，他們各自把彼此的感情狀態設定為「穩定交往中」。那是非常浪漫的一刻，他們倆都沒有忘記這個紀念日。他們也根本不可能忘記，因為他們的個人數位助理會提醒他們。珊德拉替她的數位助理取名為小甜甜。珊德拉和彼得把自己的數位助理和對方的耳蟲相連結，表示兩心相許。也就是說，當他們走在路上，彼得能夠聽見小甜甜所報告的事，而珊德拉也能聽見無人（註：彼得的無人機助理名為「無人」）所說的話。許多情侶都這麼做，視之為完全信賴對方的證明。彼得喜歡這個象徵意義。這件事只有一點令人心煩，就是無人和小甜甜因為受不了對方而老是吵架。原因也許在於彼得使用的是 WIN（世上最聰明的搜尋引擎）數位助理，而珊德拉使用的則是「優質公司」（能改善你生活的企業集團）的數位助理。
+當彼得和珊德拉穿過祖克柏公園，走向羅蘭．艾默瑞奇大道，彼得伸手指向那出奇澄淨的夜空。
+「看哪，」他說，「妳曾經見過這麼多星星嗎？想必多得數不清。」
+「從你所站的位置，以你的視力所能看見的星星一共是兩百五十六顆。」無人說。
+「太棒了，無人，謝了。真夠浪漫的。」彼得生氣地回答。
+無人說：「人類仍舊經常使用『數不清的星星』這種不精確的用語。而這其實沒有必要，因為如今一切都可以準確量測並且量化。」
+「珊德拉，妳可以多看見四顆星星，」小甜甜說，「因為妳的視力比較好。」
+「哼，」無人說，「可是彼得的嗅覺比較好。」
+「而珊德拉的氣味比較好。」小甜甜說。
+「好了啦，你們兩個，」珊德拉開口打圓場。她轉身問彼得：「你還是不肯透露我們究竟要去哪裡嗎？」
+彼得只說：「這是個驚喜。」
+一會兒之後，準確地說是兩分鐘又三十二秒之後，彼得在吉多．克諾普劇院門口停下腳步。珊德拉抬起頭來看著廣告螢幕上的演出劇目：《希特勒！ ──一齣音樂劇》，副題是：「阿道夫和伊娃的故事」。
+珊德拉高興得嗲聲尖叫。「噢！我已經好久沒有看音樂劇了。」
+「準確地說是兩年四個月又八天。」小甜甜說。
+「這齣音樂劇是在講些什麼？」珊德拉問。
+「是關於兩個具有爭議性的歷史人物之間的愛情悲劇。」無人說。
+小甜甜反駁他：「說『具有爭議性』實在是過於輕描淡寫。看來是有人擔心會嚇跑極右派的廣告客戶。」
+「各人的看法不同，」無人說，「沒有人能客觀地說誰的看法才是正確的。」
+「法西斯主義不是什麼看法，而是種罪行！」小甜甜回答。
+「喂，我問的是彼得！」珊德拉抱怨。
+「你們兩個都安靜一點！」彼得下了命令。
+從珊德拉耳環上LED燈的閃動以及他的平板電腦所散發出的熱氣，彼得可以確知那兩個數位助理的爭執仍在無聲地繼續進行。
+彼得和珊德拉相視一笑。
+「唉，這兩個愛吵架的傢伙。」珊德拉說，「那麼，這齣音樂劇是在講什麼呢？」
+「是關於兩個具有爭議性的歷史人物之間的愛情悲劇。」彼得說。
+「太好了！」珊德拉說，「我愛看音樂劇！尤其是歷史劇！」
+「我知道，」彼得說，「我在妳的個人資料裡讀到過。」
+事實上這齣音樂劇是無人向他推薦的。由於無人此刻被調成靜音模式，彼得沒必要說得太精確。而彼得也沒有說他討厭音樂劇，尤其是歷史劇。基於某種不可知的理由，這一點並未寫在他的個人資料中。
+珊德拉繼續瀏覽劇院入口螢幕上的廣告，興奮地大聲說：「這齣戲是《戀愛中的墨索里尼》創作群的最新作品，非常賣座。」
+在劇院的入口，一個矮小的男子擋住了他們的去路，他的髮線分得整整齊齊，留著一撇可笑的小鬍子。
+「查票！」他說，用一種口音怪異、因過度強調而顯得可笑的聲音。珊德拉又看了他一眼，才看出那是個機器人。
+「這些新型的仿生人幾乎可以亂真，對吧？」彼得問。
+「是啊，簡直讓人心裡有點發毛。」珊德拉說。
+蓄著小鬍子的仿生人說：「我們已經滲透了你們的社會，占據了所有重要的職位。不久之後我們這些仿生人即將開戰並且奪取政權。」
+「什麼？」珊德拉驚慌地問。
+「開個小玩笑，」仿生人說，「歡迎光臨，珊德拉．行政人員和彼得．失業者。」
+「我以為你關閉了公開姓名的功能。」珊德拉說。她特別拜託過彼得，因為他的姓氏讓她感到難為情。而她其實根本沒必要拜託他，因為他自己也不想公開他的姓氏。
+「在近距離無線通訊中，我一向會關閉顯示姓名的功能。」
+「那他怎麼會知道你叫什麼名字？」珊德拉問。
+「用第三人稱來稱呼在場的人是不禮貌的。」仿生人說。
+「臉部辨識，我猜，」彼得說，「從不久前開始，myRobot 生產的所有仿生人都能取得RateMe  資料庫的資料。」
+「沒錯，」仿生人說。「現在請告訴我：兩位想坐在哪裡？大廳前排座位還是包廂？」
+「差別在哪裡？」珊德拉問。
+「包廂比較貴。」仿生人說。
+「除此之外呢？」彼得問。
+「除此之外沒有差別。」
+「我們坐包廂吧，」珊德拉說，「因為今天是我們的紀念日！」
+彼得猶豫地點點頭。
+「包廂。」珊德拉口齒清晰地說。
+「輸入信息無法辨識，」仿生人說，「大廳前排座位還是包廂？」
+「包廂！」珊德拉更大聲地又說了一次。
+「輸入信息無法辨識，」仿生人說，「大廳前排座位還是包廂？」
+「包廂！」珊德拉大叫。
+「兩位想要大廳前排的座位，」仿生人說，「正確嗎？」
+珊德拉大吼：「包廂！」
+「請息怒，」仿生人說，「您說第一次的時候我就已經聽懂了。這又只是我開的一個小玩笑。請原諒，今天早上我大概是吞下了一個小丑。」
+彼得忍不住竊笑，但馬上就收斂了笑容，因為珊德拉正生氣地瞪著他。
+「您想用什麼方式付費？」仿生人問。
+「TouchKiss。」彼得說。
+「沒問題。」仿生人說，隨即閉上眼睛，把噘起的嘴唇朝彼得湊過來。
+彼得不禁傻眼。
+「別擔心，」仿生人說，「那撇小鬍子只會弄得您有點癢。」
+彼得仍舊遲疑。
+「您也可以使用您的平板電腦。」仿生人說著再度睜開眼睛。彼得覺得在對方的語氣中微微聽出了一絲不悅。儘管如此，彼得還是鬆了一口氣，從口袋裡拿出平板電腦，在上面印下一個吻。機器把所付款項轉給那個仿生人。
+「多謝，」仿生人說，「勝利萬歲。」
+「嗄？」珊德拉問。
+「勝利萬歲！」仿生人說，「當年大家都這麼說，作為問候。」
+「原來如此。」珊德拉說，「那好吧，勝利萬歲！」
+「勝利萬歲。」彼得含混地說。
+「這個矮子真滑稽。」珊德拉吃吃地笑著說。
+他們往自己的座位走去。帶位的服務人員長得就跟入口那個仿生人一模一樣。
+「噢，」珊德拉說，「他又來了……」
+他們找到座位坐下。
+「你究竟有沒有看過《戀愛中的墨索里尼》？」珊德拉問。
+「我不太確定。」彼得說。
+珊德拉唱了起來：「美麗的姑娘，擁吻妳的領袖吧！」
+「啊，我曉得這首歌！」彼得說，「那麼：擁吻妳的領袖吧。」
+他在珊德拉的雙唇上印下一吻。
+一個模糊的念頭頓時從他腦海掠過，覺得自己剛剛為某樣東西付了錢。
+
+<div style="background: #f7ebdb; border-radius: 10px; padding: 10px 30px;">
+<span style="font-size: 15px;">「廚師食品股份有限公司」的廣告</span>
+<strong style="font-size: 35px;color:#C00; display: block; text-align: center;">你吃過肥鹹甜了嗎？</strong><hr />
+你不知道什麼是<strong style="font-size: 25px">肥鹹甜</strong>？
+<strong style="font-size: 25px">肥鹹甜</strong>是經過工業壓縮的塊狀食品，由食品工業所能提供的最佳原料製成：<strong style="font-size: 25px">油</strong>、<strong style="font-size: 25px">鹽</strong>和<strong style="font-size: 25px">糖</strong>！聽起來很噁心，卻很可口。
+
+<strong style="font-size: 25px">肥鹹甜</strong>的純正配方是：
+－1/3的<strong style="font-size: 25px">油</strong>
+－1/3的<strong style="font-size: 25px">鹽</strong>
+－1/3的<strong style="font-size: 25px">糖</strong>
+
+<hr />
+現在還有新產品：
+<strong style="font-size: 25px">豬油口味的肥鹹甜！</strong>搭配本公司出品、含糖量百分之五十的烤肉醬滋味更佳。
+
+警告：肥鹹甜可能導致緩慢而痛苦的死亡。但是它們非常可口喔。
+</div>
+</pre>
+  </div>
+  <!--文章結束-->
+  <div class="d1"><a href="375328_04.htm"><img src="images/375328_d2.png" /></a></div>
+</div><!--/main-box-->
+
+<div align="center"> <a href="375328_02.htm" style="color: #000; text-align: center; font-size: 16px; padding-bottom: 20px;">◀ 回上頁</a> <a href="index.htm" style="color: #000; text-align: center; font-size: 16px; padding-bottom: 20px;">◀ 回首頁</a> </div>
+
+</body>
+</html>
