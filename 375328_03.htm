@@ -1,409 +1,486 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>iread灰熊愛讀書 | 歡迎光臨「優質國度」！已經為您規劃好所有的需求，請確認。</title>
+	<title>iread灰熊愛讀書 | 歡迎光臨「優質國度」！已經為您規劃好所有的需求，請確認。</title>
 
-<style type="text/css">
-/*clear float*/ 
-.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;} 
-.clearfix {display: inline-table;} 
-/* Hides from IE-mac \*/ 
-* html .clearfix {height: 1%;} 
-.clearfix {display: block;} 
-/* End hide from IE-mac */
-
-img {
-	border:0;
-}
-ol, ul, li {
-	list-style:none;
-	margin:0;
-	padding:0;
-	border:0;
-	font-size:100%;
-	font:inherit;
-	vertical-align:baseline;
-}
-
-body, pre, .overlay {
-	font-size:20px;
-	font-family:"微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
-}
-
-body {
-	background:url(images/375328_bg.jpg) top center fixed;
-	margin:0;
-}
-
-pre {
-    /*white-space: pre-line;保留換行,合併空格,遇到父元素邊界自動換行*/
-    word-wrap: break-word;      /* IE 5.5-7 */
-    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-    white-space: pre-wrap;      /* Modern browsers */
-}
-
-h1 {
-	font-size:30px;
-	margin: 0;
-	padding: 0;
-}
-
-small {
-	display:block;
-	color:#999;
-	text-align:right;
-}
-
-/*刊頭*/
-.top-box {
-	background:url(images/506102_top.jpg) no-repeat top center;
-	width:100%;
-}
-.top-box img {
-	display:block;
-	margin:0 auto;
-}
-.top-box-m {
-	display:none;	
-	margin:0 auto;
-}
-.top-box-m img, .book-box img {
-	width:100%;
-	height:auto;
-}
-
-/*內容區*/
-.main-box {
-	width:920px;
-	margin:30px auto;
-	padding:30px;
-	line-height:1.5;
-	word-wrap:break-word;
-    word-break:normal;
-    text-align:justify;
-    text-justify:inter-ideograph;
-    background: url(images/375328_boxbg.png);
-    border-radius: 10px;    
-}
-
-/*書封*/
-.book-box {
-	width:40%;
-	float:right;
-}
-
-/*單元1*/
-.txt-box {
-	width:55%;
-	float:left;
-	padding-right:5%;
-}
-
-/*書本價格*/
-.price {
-	width:100%;
-	color:#666;
-	font-family:Georgia, "Times New Roman", Times, serif, "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
-	text-align:center;
-	margin-bottom:30px;
-}
-.price strong {
-	color:#ed2525;
-}
-.price a, .price a:visited {
-	display:block;
-	width:100%;
-	color:#000;
-	text-decoration:none;
-	padding:10px 0;
-	background-color:#f7cb6f;
-	border-radius:5px;
-	margin-top:20px;
-	transition:.3s;
-}
-.price a:hover {
-	color:#fff;
-	background-color:#c81a20;
-}
-
-/*文章試讀*/
-.word {
-	width:98%;/*-20*/
-	height:520px;
-	overflow:auto;
-	color:#333;
-	margin:20px auto 0;
-	padding-right:2%;
-    word-wrap:break-word;
-    word-break:normal;
-    text-align:justify;
-    text-justify:inter-ideograph;
-}
-
-/*圖片文字*/
-.topic {
-	display:block;
-	margin:30px auto;
-}
-
-/*圖片試讀*/
-.pic-box img {
-	float:left;
-	width:19%;
-	height:auto;
-	margin:20px 0.5%;
-}
-
-/*延伸閱讀--書封-書名-作者-價格*/
-.more-column {
-    float:left;
-    width:15%; /*7本=12.6%*/
-	padding:0 0.8%;
-	text-align:center;
-}
-.more-row {
-	margin:30px auto;
-}
-.more-row:after {
-    content:"";
-    display:table;
-    clear:both;	
-}
-.more-cover {
-	display:block;
-	border:1px solid #d2d2d2;
-	background-color:#fff;
-	padding:3px;
-	margin:0 auto;
-}
-/*正常尺寸*/
-.more-cover, .more-cover .normal {
-	width:130px;
-	height:180px;
-}
-/*特殊尺寸*/
-.more-cover .sp {
-	width:130px;
-	height:auto;
-	margin-top:35%;
-}
-.more-booktitle {
-	color:#C60;
-	font-size:16px;
-	font-weight:bold;
-	line-height:1.5;
-	padding:0 5px;
-}
-.more-author {
-	color:#333;
-	font-size:16px;
-	line-height:1.5;
-	padding:0 5px;
-}
-.more-price {
-	color:#666;	
-	font-size:14px; /*7本=13.5px*/
-	line-height:1.5;
-	font-family:Georgia, "Times New Roman", Times, serif, "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
-}
-.more-price strong {
-	color:#ed2525;
-}
-.more-price a, .more-price a:visited {
-	display:block;
-	width:100%;
-	color:#000;
-	font-size:14px;
-	text-decoration:none;
-	padding:6px 0;
-	background-color:#E0E0E0;
-	border-radius:5px;
-	margin:15px auto 0;
-	transition:.3s;
-}
-.more-price a:hover {
-	color:#fff;
-	background-color:#666;
-}
-
-/*手機選單*/
-.overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-	color: #fff;
-	font-size: 22px;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-y: hidden;
-    transition: 0.5s;
-}
-.overlay-content {
-    position: relative;
-    width: 50%;
-	line-height:1.6;
-	margin: 50px auto 0;
-}
-.overlay-content span {
-	display: inline-block;
-	color: #e8a852;
-	border-bottom: 1px solid #e8a852;
-	margin: 50px 0 20px 0;
-}
-.overlay a {
-	display: block;
-	color: #fff;
-    text-decoration: none;
-    border-left: 3px solid; 
-    transition: 0.3s;
-    margin-top: 30px;
-    padding-left: 10px;
-}
-.overlay a:hover, .overlay a:focus {
-    color: #818181;
-}
-.overlay .closebtn {
-    position: absolute;
-    top: 0;
-    right: 8px;
-    font-size: 45px;
-    border-left: 0;
-    margin-top: 0;
-    padding-left: 0;
-}
-.openbtn {
-	display:none;
-	position: fixed;
-    top: 0;
-    right: 10px;
-	z-index: 9;
-	font-size: 30px;
-	cursor:pointer;
-}
-.belt {
-	width: 100%;
-	height: 237px;
-	background: url(images/375328_belt.png) center;
-}
-.d1 {
-	text-align: center;
-	margin: 0 auto;
-	padding-top: 20px;
-}
-.author {
-	float: right;
-	width: 35%;
-	margin: 30px 0 0 20px;
-}
-.author p {
-	font-size: 13px;
-}
-.author img {
-	width: 100%;
-	border-radius: 5px;
-}
-
-@media (max-width: 812px) {
-	body, pre {
-		font-size:18px;
-	}
-	h1 {
-		font-size:25px;
-	}
-	.top-box {
-		display:none;
-	}
-	.top-box-m, .openbtn {
-		display:block;
-	}
-	.main-box {
-		width:90%;
-		line-height:1.5;
-		padding:15px;
-	}
-	.book-box, .book-box img, .price ,#muteYouTubeVideoPlayer, iframe, .topic {
-		width:100%;
-	}
-	.book-box, .txt-box {
-		float:none;
-	}
-	.txt-box {
-		width:100%;
-		padding:0;
-		margin-top:50px;
-	}
-	.word {
-		height:570px;
-	}
-	.pic-box img {
-		width:48%;
-		margin:20px 1%;
+	<style type="text/css">
+		/*clear float*/
+		.clearfix:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
 		}
-	.more-column {
-		width:48%;
-		margin:20px 0;
-	}
-	.col-m {
-		width:100%;
-		display:inline-table;
-	}
-	.more-cover, .more-cover .normal {
-		width:150px;
-		height:208px;
-	}
-	.more-cover .sp {
-		width:150px;
-		height:auto;
-	}
-	body {
-		background-size: cover;
-	}
-	.d1 img {
-		width: 90%;
-	}
-	.author {
-	float: none;
-	width: 90%;
-	margin: 15px auto 0;
-}
-}
-@media (max-width: 320px) {
-	.more-cover, .more-cover .normal {
-		width:125px;
-		height:auto;
-	}
-}
-</style>
 
-<script type='text/javascript'>
-<!--
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-21769407-2']); 
-_gaq.push(['_setDomainName', 'taaze.tw']); 
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-//-->
-</script>
+		.clearfix {
+			display: inline-table;
+		}
+
+		/* Hides from IE-mac \*/
+		* html .clearfix {
+			height: 1%;
+		}
+
+		.clearfix {
+			display: block;
+		}
+
+		/* End hide from IE-mac */
+
+		img {
+			border: 0;
+		}
+
+		ol,
+		ul,
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+
+		body,
+		pre,
+		.overlay {
+			font-size: 20px;
+			font-family: "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
+		}
+
+		body {
+			background: url(images/375328_bg.jpg) top center fixed;
+			margin: 0;
+		}
+
+		pre {
+			/*white-space: pre-line;保留換行,合併空格,遇到父元素邊界自動換行*/
+			word-wrap: break-word;
+			/* IE 5.5-7 */
+			white-space: -moz-pre-wrap;
+			/* Firefox 1.0-2.0 */
+			white-space: pre-wrap;
+			/* Modern browsers */
+		}
+
+		h1 {
+			font-size: 30px;
+			margin: 0;
+			padding: 0;
+		}
+
+		small {
+			display: block;
+			color: #999;
+			text-align: right;
+		}
+
+		/*刊頭*/
+		.top-box {
+			background: url(images/506102_top.jpg) no-repeat top center;
+			width: 100%;
+		}
+
+		.top-box img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		.top-box-m {
+			display: none;
+			margin: 0 auto;
+		}
+
+		.top-box-m img,
+		.book-box img {
+			width: 100%;
+			height: auto;
+		}
+
+		/*內容區*/
+		.main-box {
+			width: 920px;
+			margin: 30px auto;
+			padding: 30px;
+			line-height: 1.5;
+			word-wrap: break-word;
+			word-break: normal;
+			text-align: justify;
+			text-justify: inter-ideograph;
+			background: url(images/375328_boxbg.png);
+			border-radius: 10px;
+		}
+
+		/*書封*/
+		.book-box {
+			width: 40%;
+			float: right;
+		}
+
+		/*單元1*/
+		.txt-box {
+			width: 55%;
+			float: left;
+			padding-right: 5%;
+		}
+
+		/*書本價格*/
+		.price {
+			width: 100%;
+			color: #666;
+			font-family: Georgia, "Times New Roman", Times, serif, "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.price strong {
+			color: #ed2525;
+		}
+
+		.price a,
+		.price a:visited {
+			display: block;
+			width: 100%;
+			color: #000;
+			text-decoration: none;
+			padding: 10px 0;
+			background-color: #f7cb6f;
+			border-radius: 5px;
+			margin-top: 20px;
+			transition: .3s;
+		}
+
+		.price a:hover {
+			color: #fff;
+			background-color: #c81a20;
+		}
+
+		/*文章試讀*/
+		.word {
+			width: 98%;
+			/*-20*/
+			height: 520px;
+			overflow: auto;
+			color: #333;
+			margin: 20px auto 0;
+			padding-right: 2%;
+			word-wrap: break-word;
+			word-break: normal;
+			text-align: justify;
+			text-justify: inter-ideograph;
+		}
+
+		/*圖片文字*/
+		.topic {
+			display: block;
+			margin: 30px auto;
+		}
+
+		/*圖片試讀*/
+		.pic-box img {
+			float: left;
+			width: 19%;
+			height: auto;
+			margin: 20px 0.5%;
+		}
+
+		/*延伸閱讀--書封-書名-作者-價格*/
+		.more-column {
+			float: left;
+			width: 15%;
+			/*7本=12.6%*/
+			padding: 0 0.8%;
+			text-align: center;
+		}
+
+		.more-row {
+			margin: 30px auto;
+		}
+
+		.more-row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.more-cover {
+			display: block;
+			border: 1px solid #d2d2d2;
+			background-color: #fff;
+			padding: 3px;
+			margin: 0 auto;
+		}
+
+		/*正常尺寸*/
+		.more-cover,
+		.more-cover .normal {
+			width: 130px;
+			height: 180px;
+		}
+
+		/*特殊尺寸*/
+		.more-cover .sp {
+			width: 130px;
+			height: auto;
+			margin-top: 35%;
+		}
+
+		.more-booktitle {
+			color: #C60;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 1.5;
+			padding: 0 5px;
+		}
+
+		.more-author {
+			color: #333;
+			font-size: 16px;
+			line-height: 1.5;
+			padding: 0 5px;
+		}
+
+		.more-price {
+			color: #666;
+			font-size: 14px;
+			/*7本=13.5px*/
+			line-height: 1.5;
+			font-family: Georgia, "Times New Roman", Times, serif, "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU";
+		}
+
+		.more-price strong {
+			color: #ed2525;
+		}
+
+		.more-price a,
+		.more-price a:visited {
+			display: block;
+			width: 100%;
+			color: #000;
+			font-size: 14px;
+			text-decoration: none;
+			padding: 6px 0;
+			background-color: #E0E0E0;
+			border-radius: 5px;
+			margin: 15px auto 0;
+			transition: .3s;
+		}
+
+		.more-price a:hover {
+			color: #fff;
+			background-color: #666;
+		}
+
+		/*手機選單*/
+		.overlay {
+			height: 0%;
+			width: 100%;
+			position: fixed;
+			z-index: 9999;
+			top: 0;
+			left: 0;
+			color: #fff;
+			font-size: 22px;
+			background-color: rgb(0, 0, 0);
+			background-color: rgba(0, 0, 0, 0.9);
+			overflow-y: hidden;
+			transition: 0.5s;
+		}
+
+		.overlay-content {
+			position: relative;
+			width: 50%;
+			line-height: 1.6;
+			margin: 50px auto 0;
+		}
+
+		.overlay-content span {
+			display: inline-block;
+			color: #e8a852;
+			border-bottom: 1px solid #e8a852;
+			margin: 50px 0 20px 0;
+		}
+
+		.overlay a {
+			display: block;
+			color: #fff;
+			text-decoration: none;
+			border-left: 3px solid;
+			transition: 0.3s;
+			margin-top: 30px;
+			padding-left: 10px;
+		}
+
+		.overlay a:hover,
+		.overlay a:focus {
+			color: #818181;
+		}
+
+		.overlay .closebtn {
+			position: absolute;
+			top: 0;
+			right: 8px;
+			font-size: 45px;
+			border-left: 0;
+			margin-top: 0;
+			padding-left: 0;
+		}
+
+		.openbtn {
+			display: none;
+			position: fixed;
+			top: 0;
+			right: 10px;
+			z-index: 9;
+			font-size: 30px;
+			cursor: pointer;
+		}
+
+		.belt {
+			width: 100%;
+			height: 237px;
+			background: url(images/375328_belt.png) center;
+		}
+
+		.d1 {
+			text-align: center;
+			margin: 0 auto;
+			padding-top: 20px;
+		}
+
+		.author {
+			float: right;
+			width: 35%;
+			margin: 30px 0 0 20px;
+		}
+
+		.author p {
+			font-size: 13px;
+		}
+
+		.author img {
+			width: 100%;
+			border-radius: 5px;
+		}
+
+		@media (max-width: 812px) {
+
+			body,
+			pre {
+				font-size: 18px;
+			}
+
+			h1 {
+				font-size: 25px;
+			}
+
+			.top-box {
+				display: none;
+			}
+
+			.top-box-m,
+			.openbtn {
+				display: block;
+			}
+
+			.main-box {
+				width: 90%;
+				line-height: 1.5;
+				padding: 15px;
+			}
+
+			.book-box,
+			.book-box img,
+			.price,
+			#muteYouTubeVideoPlayer,
+			iframe,
+			.topic {
+				width: 100%;
+			}
+
+			.book-box,
+			.txt-box {
+				float: none;
+			}
+
+			.txt-box {
+				width: 100%;
+				padding: 0;
+				margin-top: 50px;
+			}
+
+			.word {
+				height: 570px;
+			}
+
+			.pic-box img {
+				width: 48%;
+				margin: 20px 1%;
+			}
+
+			.more-column {
+				width: 48%;
+				margin: 20px 0;
+			}
+
+			.col-m {
+				width: 100%;
+				display: inline-table;
+			}
+
+			.more-cover,
+			.more-cover .normal {
+				width: 150px;
+				height: 208px;
+			}
+
+			.more-cover .sp {
+				width: 150px;
+				height: auto;
+			}
+
+			body {
+				background-size: cover;
+			}
+
+			.d1 img {
+				width: 90%;
+			}
+
+			.author {
+				float: none;
+				width: 90%;
+				margin: 15px auto 0;
+			}
+		}
+
+		@media (max-width: 320px) {
+
+			.more-cover,
+			.more-cover .normal {
+				width: 125px;
+				height: auto;
+			}
+		}
+	</style>
 </head>
 
 <body>
 
-<div class="main-box">
-  <img src="images/375328_t3.png" />
-  <!--文章開始-->
-  <div class="word">
-    <pre><h1 align="center" style="color:#C00">阿道夫和伊娃</h1>
+	<div class="main-box">
+		<img src="images/375328_t3.png" />
+		<!--文章開始-->
+		<div class="word">
+			<pre><h1 align="center" style="color:#C00">阿道夫和伊娃</h1>
 彼得．失業者曾經有過一個名叫米爾德莉．辦事員的女朋友。他是在真實生活中認識她的，也就是在類比世界裡。那當然是非常罕見而且有點難以啟齒，所以他們在公眾場合不太願意談起這件事。他們經常爭吵，但是從正面的角度來看，和米爾德莉在一起的生活也因此而從不無聊。在五百一十二天前，他們倆純粹為了好玩而登入了「優質伴侶」這個網站，讓網站比較他們兩人的性格。系統說他們兩個並不適合彼此，甚至分別替他們介紹了一個更好的伴侶。彼得和米爾德莉考慮了很久，終於看清他們的確不適合彼此。純粹為了好玩而登入「優質伴侶」其實一點也不好玩。他們倆都偷偷和一個更好的伴侶約好見面。欸，當然不是和一個更好的伴侶，而是和最佳伴侶。
 彼得的最佳伴侶是珊德拉．行政人員。他們從不爭吵。珊德拉的姿色中等，一如彼得這個等級的男人所能期望的。在整整五百天前，他們各自把彼此的感情狀態設定為「穩定交往中」。那是非常浪漫的一刻，他們倆都沒有忘記這個紀念日。他們也根本不可能忘記，因為他們的個人數位助理會提醒他們。珊德拉替她的數位助理取名為小甜甜。珊德拉和彼得把自己的數位助理和對方的耳蟲相連結，表示兩心相許。也就是說，當他們走在路上，彼得能夠聽見小甜甜所報告的事，而珊德拉也能聽見無人（註：彼得的無人機助理名為「無人」）所說的話。許多情侶都這麼做，視之為完全信賴對方的證明。彼得喜歡這個象徵意義。這件事只有一點令人心煩，就是無人和小甜甜因為受不了對方而老是吵架。原因也許在於彼得使用的是 WIN（世上最聰明的搜尋引擎）數位助理，而珊德拉使用的則是「優質公司」（能改善你生活的企業集團）的數位助理。
 當彼得和珊德拉穿過祖克柏公園，走向羅蘭．艾默瑞奇大道，彼得伸手指向那出奇澄淨的夜空。
@@ -503,12 +580,17 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 警告：肥鹹甜可能導致緩慢而痛苦的死亡。但是它們非常可口喔。
 </div>
 </pre>
-  </div>
-  <!--文章結束-->
-  <div class="d1"><a href="375328_04.htm"><img src="images/375328_d2.png" /></a></div>
-</div><!--/main-box-->
+		</div>
+		<!--文章結束-->
+		<div class="d1"><a href="375328_04.htm"><img src="images/375328_d2.png" /></a></div>
+	</div>
+	<!--/main-box-->
 
-<div align="center"> <a href="375328_02.htm" style="color: #000; text-align: center; font-size: 16px; padding-bottom: 20px;">◀ 回上頁</a> <a href="index.htm" style="color: #000; text-align: center; font-size: 16px; padding-bottom: 20px;">◀ 回首頁</a> </div>
+	<div align="center"> <a href="375328_02.htm"
+			style="color: #000; text-align: center; font-size: 16px; padding-bottom: 20px;">◀ 回上頁</a> <a
+			href="index.htm" style="color: #000; text-align: center; font-size: 16px; padding-bottom: 20px;">◀ 回首頁</a>
+	</div>
 
 </body>
+
 </html>
