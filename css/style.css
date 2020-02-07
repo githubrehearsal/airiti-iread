@@ -1,0 +1,29 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: #fff url(../images/bg.jpg) center center fixed no-repeat;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.top {
+    position: fixed;
+    right: 5%;
+    width: 80px;
+    bottom: 10%;
+}
+
+.img-space1{
+    position: relative;
+    top: -21px;
+}
+
+.img-space2{
+    position: relative;
+    top: -42px;
+}
+
+.img-space3{
+    position: relative;
+    top: -74px;
+}
