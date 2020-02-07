@@ -27,3 +27,11 @@
     position: relative;
     top: -74px;
 }
+
+.others > p{
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 7.5px 0;
+    text-align: center;
+    color: rgb(200, 200, 200);
+}
