@@ -5,11 +5,20 @@
 
 body {
   background-color: #188aa2;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@keyframes bg-effect{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
 }
 
 .wrapper {
   margin: 0 auto;
-  width: 960px;
+  width: 100%;
 }
 
 .other-infor {
