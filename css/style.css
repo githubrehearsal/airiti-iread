@@ -1,0 +1,82 @@
+* {
+  font-family: 'Microsoft JhengHei',Arial, Helvetica, sans-serif;
+  text-decoration: none !important;
+}
+
+body {
+  background-color: #188aa2;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.other-infor {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.other-infor p {
+  margin-right: auto;
+  color: whitesmoke;
+}
+
+.other-infor span {
+  color: #0c4551;
+}
+
+.title {
+  font-size: 90px;
+  line-height: 135px;
+  color: whitesmoke;
+  text-shadow: 5px 5px 3px #136e82;
+  letter-spacing: 6px;
+  position: relative;
+}
+
+.title a {
+  height: 48px;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: #188aa2;
+  background-color: #f5a22b;
+  text-shadow: none;
+  -webkit-box-shadow: 5px 5px 0 #188aa2;
+          box-shadow: 5px 5px 0 #188aa2;
+  position: absolute;
+  top: none;
+  right: 0;
+  bottom: 0;
+  left: none;
+  margin: auto;
+}
+
+@-webkit-keyframes btn-effect {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    height: 110%;
+    width: 110%;
+    opacity: 0.5;
+  }
+}
+
+@keyframes btn-effect {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    height: 110%;
+    width: 110%;
+    opacity: 0.5;
+  }
+}
+/*# sourceMappingURL=style.css.map */
