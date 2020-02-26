@@ -1,0 +1,13 @@
+.wrapper, .list-area {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.list-area {
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: none;
+    left: 0;
+    transition: 0.5s linear;
+}
