@@ -1,0 +1,19 @@
+.wrapper{
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.speacil-area{
+    position: fixed;
+    top:0;
+    right:none;
+    bottom:0;
+    left:-171px;
+    margin:auto;
+    transition: 0.5s linear;
+}
+
+.effect-move{
+    left:-10px;
+}
