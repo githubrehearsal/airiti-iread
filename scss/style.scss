@@ -1,0 +1,575 @@
+@import 'reset';
+@import 'owl-carousel';
+@import 'layout';
+@import 'color';
+@import 'fonts';
+@import 'screen';
+@import 'animation-plugin';
+@import 'owl-custom';
+
+//共用邊距----------
+.content-area{
+    @include p-x(10%, 10%);
+}
+//共用屬性----------
+.block-l{
+    display: block;
+}
+.none-l{
+    display: none;
+}
+body{
+    background-color: $main-color;
+    overflow-x: hidden;
+    background-image: url(../image/bg.svg);
+    background-size: 50px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    animation:bg-animation 30s linear infinite;
+}
+@keyframes bg-animation{
+    0%{background-position-y: 0};
+    100%{background-position-y: 100%;}
+}
+//js 引用----------
+.books-area-tab-active{
+    background-color: $white !important;
+    color: $main-color !important;
+}
+.content-area-active{
+    background-color: $yellow !important;
+    color: $main-color !important;
+}
+
+//頁首----------
+header{
+    @include flex-row;
+    align-items: center;
+    background-color: $white;
+    .header-logo{
+        @include m-r(auto);
+    }
+    .header-infor{
+        @include m-x(auto, 2rem);
+        @include flex-row;
+        a:first-child{
+            @include m-r(1rem);
+        }
+        a:last-child{
+            @include m-l(1rem);
+        }
+        a{
+            color: $black;
+        }
+    }
+    .fb-like{
+        height: 20px;
+        display: block;
+    }
+    div{
+        @include p-y(20px, 20px);
+    }
+}
+//主視覺----------
+.main-img{
+    animation: img-animation 1s linear;
+}
+@keyframes img-animation{
+    0%{@include translate(0, 15%);}
+}
+//影片----------
+.video{
+    @include m-y(5%, 5%);
+    h2{
+        @include p-y(2.5%, 5%);
+        color: $white;
+        font-size: 3rem;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+    video{
+        width: 100%;
+    }
+}
+//書單----------
+.books-area{
+    @include m-y(5%, 5%);
+    .books-area-tab{
+        @include flex-row;
+        width: 100%;
+        position: relative;
+        li{
+            width: 100%;
+            border-top: 1px solid $white;
+            border-bottom: 1px solid $white;
+            a{
+                @include p-y(2rem, 2rem);
+                font-size: 1.25rem;
+                text-align: center;
+                color: $yellow;
+                background-color: $main-color;
+                display: block;
+            }
+            a:hover{
+                color: $main-color;
+                background-color: $white;
+            }
+        }
+        li:first-child{
+            @include m-r(auto);
+            border-right: 1px solid $white;
+        }
+        li:nth-child(2), li:nth-child(3){
+            @include m-x(auto, auto);
+            border-right: 1px solid $white;
+        }
+        li:last-child{
+            @include m-l(auto);
+        }
+    }
+    .books-area-content{
+        @include m-y(2.5%, 2.5%);
+        @include flex-row;
+        flex-wrap: wrap;
+        .books-area-content-list{
+            @include m-x(1.5%, 1.5%);
+            @include m-y(2.5%, 2.5%);
+            width: 17%;
+            h3{
+                @include m-y(1rem, 1rem);
+                font-size:1.25rem;
+                line-height: 1.875rem;
+                color: $yellow;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+            p{
+                @include m-y(1rem, 1rem);
+                font-size: 1rem;
+                line-height: 1.5rem;
+                color: $white;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+            span{
+                @include m-y(2rem, 2rem);
+                @include p-y(1rem, 1rem);
+                width: 100%;
+                display: block;
+                text-align: center;
+                color: $white;
+                background-color: $main-color;
+                border: 1px solid $white;
+                text-indent: -0.5rem;
+                cursor: pointer;
+                i{
+                    @include p-r(0.5rem);
+                }
+            }
+            span:hover{
+                background-color: $white;
+                color: $main-color;
+            }
+        }
+    }
+    .tab-list2, .tab-list3, .tab-list4{
+        display: none;
+    }
+}
+//書籍內容----------
+    .books-content{
+        @include fixed(0, 0, 0, 0, auto);
+        height: 80%;
+        min-height: 600px;
+        max-height: 800px;
+        width: 600px;
+        display: none;
+        .books-content-infor{
+            @include p-y(1rem, 1rem);
+            .books-content-infor-img{
+                @include m-x(auto, auto);
+                @include m-y(1rem, 1rem);
+                width: 33.3%;
+            }
+            .books-content-infor-content{
+                h3{
+                    @include m-y(1rem, 1rem);
+                    font-size: 2rem;
+                    color: $black;
+                }
+                p{
+                    @include m-y(1rem, 1rem);
+                    font-size: 1rem;
+                    color: $black;
+                }
+                article{
+                    font-size: 1.25rem;
+                    line-height: 1.875rem;
+                    color: $black;
+                }
+                a{
+                    @include m-y(1rem, 0);
+                    @include p-y(1rem, 1rem);
+                    display: block;
+                    text-align: center;
+                }
+                .books-content-infor-content-link{
+                    color: $white;
+                    background-color: $brand-color;
+                    border: 1px solid $brand-color;
+                }
+                .books-content-infor-content-link:hover{
+                    color: $white;
+                    background-color: $brand-color*1.25;
+                    border: 1px solid $brand-color*1.25;
+                }
+                .books-content-infor-content-close{
+                    color: $black;
+                    background-color: $white;
+                    border: 1px solid $black;
+                }
+                .books-content-infor-content-close:hover{
+                    color: $white;
+                    background-color: $black;
+                    border: 1px solid $black;
+                }
+            }
+        }
+        &:after{
+            @include fixed(0, 0, 0, 0, auto);
+            @include bg-color-a($light-gray*1.25, 0.975);
+            content: '';
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background-image: url(../image/);
+        }
+    }
+//頁尾----------
+footer{
+    @include p-y(1rem, 1rem);
+    @include flex-row;
+    background-color: $white;
+    p{
+        color: $black;
+    }
+    p:first-child{
+        @include m-r(auto);
+        a{
+            color: $black;
+            text-decoration: underline;
+        }
+    }
+    p:nth-child(2), p:nth-child(3){
+        @include m-x(auto, auto);
+    }
+    p:last-child{
+        @include m-l(auto);
+    }
+}
+//版權宣告----------
+.copyright{
+    @include flex-row;
+    align-items: center;
+    background-color: $brand-color;
+    .copyright-openbook{
+        @include m-r(1.5rem);
+    }
+    .copyright-iread{
+        @include m-l(1.5rem);        
+    }
+    .copyright-openbook, .copyright-iread{
+        @include flex-row;
+        align-items: center;
+        p{
+            @include m-r(0.25rem);
+            color: $white;
+        }
+        div{
+            @include m-l(0.25rem);
+            @include flex-row;
+            align-items: center;
+            img{
+                @include m-r(0.25rem);
+                width: 40px;
+            }
+            span{
+                color: $white;
+            }
+        }
+    }
+    .copyright-content{
+        @include m-l(auto);
+        color: $white;
+    }
+}
+//區塊連結----------
+$size: 60px;
+.content-link{
+    @include fixed(0, 0, 0, none, auto);
+    @include flex-col;
+    height: 150px;
+    width: 7.5%;
+    a{
+        @include m-y(1rem, 1rem);
+        height: $size;
+        width: 100%;
+        line-height: $size;
+        color: $white;
+        border-top-left-radius: $size;
+        border-bottom-left-radius: $size;
+        border: 1px solid $white;
+        background-color: $main-color;
+        text-align: center;
+        i{
+            @include p-r(0.5rem);
+            display: inline-block;
+        }
+    }
+}
+
+@include ipad{
+    header{
+        .header-infor{
+            a:first-child{
+                @include m-r(0.5rem);
+            }
+            a:last-child{
+                @include m-l(0.5rem);
+            }
+        }
+    }
+    .books-area{
+        .books-area-tab{
+            flex-wrap: wrap;
+            li{
+                width: 50%;
+                box-sizing: border-box;
+                border: none;
+                border: 1px solid $white;
+                a{
+                    @include p-y(1rem, 1rem);
+                }
+            }
+            li:first-child, li:nth-child(2){
+                border-bottom: none;
+            }
+            li:first-child, li:nth-child(3){
+                border-left: none;
+                border-right: none;
+            }
+            li:nth-child(2), li:nth-child(4){
+                border-right: none;
+            }
+        }
+        .books-area-content{
+            flex-wrap: wrap;
+            .books-area-content-list{
+                width: 47%;
+            }
+        }
+    }
+    footer{
+        flex-wrap: wrap;
+        p{
+            @include p-y(0.5rem, 0.5rem);
+            width: 50%;
+        }
+    }
+    .copyright{
+        flex-wrap: wrap;
+        p{
+            @include p-y(0.5rem, 0.5rem);
+        }
+        .copyright-openbook{
+            @include m-l(1rem);
+            @include m-r(auto);
+        }
+        .copyright-iread{
+            @include m-r(1rem);
+            @include m-l(auto);
+        }
+        .copyright-content{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .content-link{
+        width: 15%;
+        min-width: 125px;
+    }
+}
+
+@include mobile-l{
+    .block-m{
+        display: block;
+    }
+    .none-m{
+        display: none;
+    }
+    .content-area{
+        @include p-x(5%, 5%);
+    }
+    header{
+        flex-wrap: wrap;
+        .header-logo{
+            @include p-y(1rem, 0.5);
+            width: 100%;
+            text-align: center;
+        }
+        .header-infor{
+            @include m-r(auto);
+        }
+        .fb-like{
+            @include m-l(auto);
+            min-width: 50px;
+        }
+    }
+    .main-img{
+        @include m-y(1.25rem, 1.25rem);
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .video{
+        @include m-y(1.25rem, 1.25rem);
+        h2{
+            font-size: 2rem;
+        }
+    }
+    .books-area{
+        @include m-y(1.25rem, 1.25rem);
+        .books-area-tab{
+            flex-wrap: wrap;
+            li{
+                width: 50%;
+                box-sizing: border-box;
+                border: none;
+                border: 1px solid $white;
+                a{
+                    font-size: 1rem;
+                    @include p-y(1rem, 1rem);
+                }
+            }
+            li:first-child, li:nth-child(2){
+                border-bottom: none;
+            }
+            li:first-child, li:nth-child(3){
+                border-left: none;
+                border-right: none;
+            }
+            li:nth-child(2), li:nth-child(4){
+                border-right: none;
+            }
+        }
+    }
+    .books-content{
+        @include m-y(1rem, 1rem);
+        height: 85%;
+        width: 90%;
+        .books-content-infor{
+            .books-content-infor-img{
+                @include m-t(0);
+                width: 50%;
+            }
+            .books-content-infor-content{
+                h3{
+                    @include m-y(0.5rem, 1rem);
+                    font-size: 1.5rem;
+                }
+                p{
+                    @include m-y(0.5rem, 0.5rem);
+                    font-size: 1rem;
+                }
+                article{
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
+                a{
+                    @include m-y(1rem, 0);
+                    @include p-y(1rem, 1rem);
+                    width: 47.5%;
+                    display: inline-block;
+                }
+                a:first-child{
+                    @include m-r(1.25%);
+                }
+                a:last-child{
+                    @include m-l(1.25%);
+                }
+            }
+        }
+    }
+    footer{
+        p{
+            width: 100%;
+        }
+    }
+    .copyright{
+        .copyright-openbook{
+            @include m-x(0, 0);
+        }
+        .copyright-iread{
+            @include m-x(0, 0);
+        }
+        .copyright-content{
+            text-align: left;
+        }
+        .copyright-openbook, .copyright-iread, .copyright-content{
+            width: 100%;    
+        }
+    }
+    $size: 45px;
+    .content-link{
+        height: 190px;
+        top: 60%;
+        a{
+            @include m-y(0.5rem, 0.5rem);
+            height: $size;
+            width: 100%;
+            line-height: $size;
+        }
+    }
+}
+
+@include mobile-s{
+    .content-area{
+        @include p-x(2.5%, 2.5%);
+    }
+    .books-area{
+        .books-area-tab{
+            li{
+                a{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+    .books-content{
+        height: 400px;
+        .books-content-infor{
+            .books-content-infor-img{
+                width: 35%;
+            }
+        }
+    }
+    .copyright{
+        .copyright-content{
+            font-size: 0.9rem;
+        }
+    }
+    .content-link{
+        min-width: 90px;
+        a{
+            i{
+                display: none;
+            }
+        }
+    }
+}
