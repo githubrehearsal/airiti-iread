@@ -317,6 +317,7 @@ $size: 60px;
     @include flex-col;
     height: 150px;
     width: 7.5%;
+    min-width: 125px;
     a{
         @include m-y(1rem, 1rem);
         height: $size;
@@ -403,7 +404,6 @@ $size: 60px;
     }
     .content-link{
         width: 15%;
-        min-width: 125px;
     }
 }
 

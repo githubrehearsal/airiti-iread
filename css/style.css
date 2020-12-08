@@ -4005,6 +4005,7 @@ footer p:last-child {
           flex-direction: column;
   height: 150px;
   width: 7.5%;
+  min-width: 125px;
 }
 
 .content-link a {
@@ -4096,7 +4097,6 @@ footer p:last-child {
   }
   .content-link {
     width: 15%;
-    min-width: 125px;
   }
 }
 
