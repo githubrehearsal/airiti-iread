@@ -433,18 +433,18 @@ $size: 60px;
         }
     }
     .main-img{
-        @include m-y(1.25rem, 1.25rem);
+        @include m-y(2.5rem, 2.5rem);
         padding-left: 0;
         padding-right: 0;
     }
     .video{
-        @include m-y(1.25rem, 1.25rem);
+        @include m-y(2.5rem, 2.5rem);
         h2{
             font-size: 2rem;
         }
     }
     .books-area{
-        @include m-y(1.25rem, 1.25rem);
+        @include m-y(2.5rem, 2.5rem);
         .books-area-tab{
             flex-wrap: wrap;
             li{
@@ -470,18 +470,18 @@ $size: 60px;
         }
     }
     .books-content{
-        @include m-y(1rem, 1rem);
+        @include m-y(2.5rem, 2.5rem);
         height: 85%;
         width: 90%;
         .books-content-infor{
             .books-content-infor-img{
                 @include m-t(0);
-                width: 50%;
+                width: 40%;
             }
             .books-content-infor-content{
                 h3{
                     @include m-y(0.5rem, 1rem);
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
                 }
                 p{
                     @include m-y(0.5rem, 0.5rem);
