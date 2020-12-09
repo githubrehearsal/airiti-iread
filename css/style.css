@@ -3648,16 +3648,9 @@ header div {
   margin-bottom: 5%;
 }
 
-.video h2 {
-  padding-top: 2.5%;
-  padding-bottom: 5%;
-  color: whitesmoke;
-  font-size: 3rem;
-  letter-spacing: 4px;
-  text-align: center;
-}
-
 .video video {
+  padding-top: 5%;
+  padding-bottom: 5%;
   width: 100%;
 }
 

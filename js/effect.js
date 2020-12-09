@@ -131,18 +131,9 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         var WindowWidth = $(window).width();
-        var ContentLength = $('section').length;
-        var HeaderHeight = $('header').height();
         var WindowScrollTop = $(window).scrollTop();
         var BooksAreaPosition = $('.books-area').offset().top;
         var BooksTabHeight = $('.books-area-tab').height();
-        //滾動偵測各區塊項目
-        for (let i = 0; i < ContentLength; i++) {
-            if ($('section').eq(i).offset().top <= WindowScrollTop + HeaderHeight) {
-                $('.content-link a').removeClass('content-area-active')
-                $('.content-link a').eq(i).addClass('content-area-active')
-            }
-        }
         //頁籤功能定位
         if ( WindowWidth <= 480 && WindowScrollTop >= BooksAreaPosition - BooksTabHeight) {
             $('.books-area-tab').css({'width':'100%','position':'fixed','top':'0', 'right':'0', 'bottom':'none', 'left':'0'});
@@ -152,8 +143,10 @@ $(document).ready(function () {
         
     });
     //各區塊連結按鈕功能
-    $('.content-link a').click(function (e) {
+    $('.content-link a').not('.content-area-link').click(function (e) {
         var ContentTop = $($(this).attr('href')).offset().top;
+        $('.content-link a').not('.content-area-link').removeClass('content-area-active');
+        $(this).addClass('content-area-active');
         $('html, body').animate({ scrollTop: ContentTop }, 1000);
         return false;
     });

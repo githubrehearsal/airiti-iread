@@ -80,14 +80,8 @@ header{
 //影片----------
 .video{
     @include m-y(5%, 5%);
-    h2{
-        @include p-y(2.5%, 5%);
-        color: $white;
-        font-size: 3rem;
-        letter-spacing: 4px;
-        text-align: center;
-    }
     video{
+        @include p-y(5%, 5%);
         width: 100%;
     }
 }
