@@ -3737,10 +3737,10 @@ header div {
 }
 
 .books-area .books-area-content .books-area-content-list h3 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  line-height: 1.875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: #ffd205;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3750,8 +3750,8 @@ header div {
 }
 
 .books-area .books-area-content .books-area-content-list p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   color: whitesmoke;
@@ -3764,8 +3764,8 @@ header div {
 }
 
 .books-area .books-area-content .books-area-content-list span {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 100%;
@@ -4014,17 +4014,25 @@ footer p:last-child {
   height: 60px;
   width: 100%;
   line-height: 60px;
-  color: whitesmoke;
   border-top-left-radius: 60px;
   border-bottom-left-radius: 60px;
   border: 1px solid whitesmoke;
-  background-color: #0f3fe6;
   text-align: center;
 }
 
 .content-link a i {
   padding-right: 0.5rem;
   display: inline-block;
+}
+
+.content-link .content-area-btn {
+  color: whitesmoke;
+  background-color: #0f3fe6;
+}
+
+.content-link .content-area-link {
+  color: whitesmoke;
+  background-color: #ec8123;
 }
 
 @media (max-width: 768px) {
@@ -4228,7 +4236,7 @@ footer p:last-child {
   }
   .content-link {
     height: 190px;
-    top: 60%;
+    top: 40%;
   }
   .content-link a {
     margin-top: 0.5rem;

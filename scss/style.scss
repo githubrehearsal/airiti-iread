@@ -136,9 +136,9 @@ header{
             @include m-y(2.5%, 2.5%);
             width: 17%;
             h3{
-                @include m-y(1rem, 1rem);
-                font-size:1.25rem;
-                line-height: 1.875rem;
+                @include m-y(0.5rem, 0.5rem);
+                font-size:1rem;
+                line-height: 1.5rem;
                 color: $yellow;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -147,7 +147,7 @@ header{
                 -webkit-box-orient: vertical;
             }
             p{
-                @include m-y(1rem, 1rem);
+                @include m-y(0.5rem, 0.5rem);
                 font-size: 1rem;
                 line-height: 1.5rem;
                 color: $white;
@@ -159,7 +159,7 @@ header{
                 -webkit-box-orient: vertical;
             }
             span{
-                @include m-y(2rem, 2rem);
+                @include m-y(1rem, 1rem);
                 @include p-y(1rem, 1rem);
                 width: 100%;
                 display: block;
@@ -323,16 +323,22 @@ $size: 60px;
         height: $size;
         width: 100%;
         line-height: $size;
-        color: $white;
         border-top-left-radius: $size;
         border-bottom-left-radius: $size;
         border: 1px solid $white;
-        background-color: $main-color;
         text-align: center;
         i{
             @include p-r(0.5rem);
             display: inline-block;
         }
+    }
+    .content-area-btn{
+        color:$white;
+        background-color: $main-color;
+    }
+    .content-area-link{
+        color: $white;
+        background-color: $brand-color;
     }
 }
 
@@ -528,7 +534,7 @@ $size: 60px;
     $size: 45px;
     .content-link{
         height: 190px;
-        top: 60%;
+        top: 40%;
         a{
             @include m-y(0.5rem, 0.5rem);
             height: $size;
