@@ -3769,6 +3769,7 @@ header div {
   border: 1px solid whitesmoke;
   text-indent: -0.5rem;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .books-area .books-area-content .books-area-content-list span i {
@@ -3838,6 +3839,7 @@ header div {
   padding-bottom: 1rem;
   display: block;
   text-align: center;
+  border-radius: 10px;
 }
 
 .books-content .books-content-infor .books-content-infor-content .books-content-infor-content-link {
@@ -4007,8 +4009,8 @@ footer p:last-child {
   height: 60px;
   width: 100%;
   line-height: 60px;
-  border-top-left-radius: 60px;
-  border-bottom-left-radius: 60px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   border: 1px solid whitesmoke;
   text-align: center;
 }

@@ -18,6 +18,8 @@
 .none-l{
     display: none;
 }
+//按鈕圓角----------
+$btn-radius:10px;
 body{
     background-color: $main-color;
     overflow-x: hidden;
@@ -163,6 +165,7 @@ header{
                 border: 1px solid $white;
                 text-indent: -0.5rem;
                 cursor: pointer;
+                border-radius: $btn-radius;
                 i{
                     @include p-r(0.5rem);
                 }
@@ -213,6 +216,7 @@ header{
                     @include p-y(1rem, 1rem);
                     display: block;
                     text-align: center;
+                    border-radius: $btn-radius;
                 }
                 .books-content-infor-content-link{
                     color: $white;
@@ -317,10 +321,11 @@ $size: 60px;
         height: $size;
         width: 100%;
         line-height: $size;
-        border-top-left-radius: $size;
-        border-bottom-left-radius: $size;
+        border-top-left-radius: $btn-radius;
+        border-bottom-left-radius: $btn-radius;
         border: 1px solid $white;
         text-align: center;
+        
         i{
             @include p-r(0.5rem);
             display: inline-block;
